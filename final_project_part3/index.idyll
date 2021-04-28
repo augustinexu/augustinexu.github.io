@@ -1,0 +1,20 @@
+[meta title:"Final_project_part3" description:"Short description of your project" /]
+
+[Header
+  fullWidth:true
+  title:"Stephen Curry Shot from 2010 To 2018"
+  subtitle:"Welcome to Idyll. Open index.idyll to start writing"
+  author:"Augustine Xu"
+  authorLink:"https://github.com/augustinexu/augustinexu.github.io"
+  date:"May 10, 2021"
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+[var name:"x" value:0 /]
+
+## Dataset
+
+[data name:"df" source:"Stephen_curry_shooting.csv"/]
+
+[Table data:df /]
