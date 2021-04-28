@@ -15,6 +15,6 @@
 
 ## Dataset
 
-[data name:"df" source:"Stephen_curry_shooting.csv"/]
+[data name:"df" source:"Stephen_curry_shot.json"/]
 
 [Table data:df /]
