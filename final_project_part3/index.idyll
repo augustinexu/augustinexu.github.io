@@ -18,3 +18,63 @@
 [data name:"df" source:"Stephen_curry_shot.json"/]
 
 [Table data:df /]
+
+[IdyllVegaLite data:df spec:`{
+  mark: "bar",
+  width:600,
+  height:400,
+  // add in a transformation to filter our data
+  encoding: {
+    x: {field:"season", type:"nominal"},
+	y: {aggregate:"count", field:"season"}
+	//color: colorBy4
+  }
+}` 
+/]
+
+[IdyllVegaLite spec:`{
+  "data": {
+    "values": [
+      {
+        "x": -220,
+        "y": -220
+      },
+      {
+        "x": -220,
+        "y": 140
+      },
+      {
+        "x": 0,
+        "y": null
+      },
+      {
+        "x": 220,
+        "y": 140
+      },
+      {
+        "x": 220,
+        "y": -220
+      }
+
+    ]
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "x", "type": "quantitative"},
+    "y": {"field": "y", "type": "quantitative"}
+  }
+}` 
+/]
+
+[IdyllVegaLite data:df spec:`{
+  mark: "point",
+  width:600,
+  height:400,
+  // add in a transformation to filter our data
+  encoding: {
+    x: {field:"x", type:"quantitative"},
+	y: {field:"y", type:"quantitative"}
+	//color: colorBy4
+  }
+}` 
+/]
