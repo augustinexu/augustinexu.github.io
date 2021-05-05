@@ -32,7 +32,8 @@
 }` 
 /]
 
-[IdyllVegaLite spec:`{
+ [IdyllVegaLite spec:`{
+  "layer":[
   "data": {
     "values": [
       {
