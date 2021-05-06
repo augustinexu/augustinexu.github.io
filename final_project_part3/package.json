@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "d3": "^4.0.0",
+    "d3-shotchart": "0.0.2",
     "idyll": "^5.0.0",
     "idyll-d3-component": "^2.0.0",
     "idyll-vega-lite": "^2.1.0",

@@ -32,40 +32,7 @@
 }` 
 /]
 
- [IdyllVegaLite spec:`{
-  "layer":[
-  "data": {
-    "values": [
-      {
-        "x": -220,
-        "y": -220
-      },
-      {
-        "x": -220,
-        "y": 140
-      },
-      {
-        "x": 0,
-        "y": null
-      },
-      {
-        "x": 220,
-        "y": 140
-      },
-      {
-        "x": 220,
-        "y": -220
-      }
-
-    ]
-  },
-  "mark": "line",
-  "encoding": {
-    "x": {"field": "x", "type": "quantitative"},
-    "y": {"field": "y", "type": "quantitative"}
-  }
-}` 
-/]
+ 
 
 [IdyllVegaLite data:df spec:`{
   mark: "point",
