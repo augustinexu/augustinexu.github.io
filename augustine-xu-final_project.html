@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 
 
-<title>test</title>
+<title>Final project</title>
 
 <style type="text/css">
     /*!
@@ -13044,6 +13044,9 @@ div#notebook {
     page-break-inside: avoid;
   }
 }
+h1 {text-align: center;}
+h2 {text-align: center;}
+div {text-align: center;}
 </style>
 
 <!-- Loading mathjax macro -->
@@ -13105,9 +13108,12 @@ div#notebook {
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container">
-      
+    
 
-
+<div>
+  <h1>Stephen Curry Shot from 2010 to 2018</h1>
+  <h2>Author:Augustine Xu</h2>
+</div>
 
   <div class="cell text_cell">
     <button class="js-nbinteract-widget">
@@ -13119,10 +13125,9 @@ div#notebook {
 
 
   
-
   <div class="
       cell border-box-sizing code_cell rendered">
-    <div class="input">
+    <div class="input" style="display: none;">
 
 <div class="inner_cell">
     <div class="input_area">
@@ -13203,13 +13208,13 @@ div#notebook {
 </div>
 </div>
 
+<h2>Dashboard</h2>
 <div class="output_wrapper">
 <div class="output">
 
 
 <div class="output_area">
 
-    
 
 
 
@@ -13227,7 +13232,7 @@ div#notebook {
 
 
 
-<div class="output_text output_subarea output_execute_result">
+<div class="output_text output_subarea output_execute_result" style="display: none;">
 <pre>&lt;function __main__.create_court(Season, Color, Shot_type)&gt;</pre>
 </div>
 
@@ -13241,7 +13246,7 @@ div#notebook {
   
 
   <div class="
-      cell border-box-sizing code_cell rendered">
+      cell border-box-sizing code_cell rendered" style="display: none;">
     <div class="input">
 
 <div class="inner_cell">
@@ -13254,6 +13259,27 @@ div#notebook {
 </div>
 
   </div>
+
+<img src="">
+<p>The name of the dataset is "Stephen_curry_shooting". It is from the website
+named “NBAsavant” which provides detailed stats for NBA league. 
+You can search any dataset you interested on this site. There is not specific license while it
+indicates the all data is from stats.nba.com which is the official NBA website and ESPN. We are
+allowed to use the data for non-profit analysis and visualization. 
+The file is 1224KB and 7224 rows * 22 columns.</p>
+<br>
+
+<p>The dataset has 7224 rows and 22 columns. Each row represents a shot taken by Stephen
+Curry during his career in NBA. The columns are indicating the details of each shot including
+<i>‘name’, ‘team_name’, ‘game_date’, ‘season’, ‘espn_player_id’, ‘team_id’,‘espn_game_id’,
+‘period’, ‘minutes_remaining’, ‘seconds_remaining’,‘shot_made_flag’, ‘action_type’, ‘shot_type’,
+‘shot_distance’,‘opponent’, ‘x’, ‘y’, ‘dribbles’, ‘touch_time’, ‘defender_name’,‘defender_distance’,
+‘shot_clock’. </i> In this dataset, <b>'name', 'team_name', 'espn_player_id' and 'team_id' </b>
+are all the same since it is the dataset of shots by Stephen Curry and he only plays for Golden 
+State Warriors since he entered the league. There are two special columns in this dataset which 
+is <b>'x'</b> and <b>'y'</b>. It is the x-axis and y-axis for the shot location on the scaled NBA court.
+</p>
+
 
 
 
@@ -13268,7 +13294,7 @@ div#notebook {
     }
 
     var interact = new window.NbInteract({
-      spec: 'augustinexu/augustinexu.github.io/master',
+      spec: 'augustinexu/augustinexu.github.io/main',
       baseUrl: 'https://mybinder.org',
       provider: 'gh',
     })

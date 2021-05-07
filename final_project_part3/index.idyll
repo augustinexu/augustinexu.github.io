@@ -22,6 +22,7 @@
 [var name:"colorBy" value:`{}`/]
 
 [IdyllVegaLite data:df spec:`{
+  title:"Stephen Curry Shot Attempted from 2010 to 2017 season",
   description: "Max and min total floors for each district",
   data: {
     url: "https://raw.githubusercontent.com/augustinexu/augustinexu.github.io/main/Stephen_curry_shot.json"
@@ -44,6 +45,7 @@ Color By:
 [var name:"colorBy2" value:`{}`/]
 
 [IdyllVegaLite data:df spec:`{
+  title:"Stephen Curry Shot Attempted and Made over Teams",
   description: "Max and min total floors for each district",
   data: {
     url: "https://raw.githubusercontent.com/augustinexu/augustinexu.github.io/main/Stephen_curry_shot.json"
@@ -67,7 +69,7 @@ Color By:
 ##Contextual visualizations
 
 ##Info
-The name of the dataset is Stephen_curry_shooting. It is from the website
+The name of the dataset is "Stephen_curry_shooting". It is from the website
 named “NBAsavant” which provides detailed stats for NBA league. 
 You can search any dataset you interested on this site. There is not specific license while it
 indicates the all data is from stats.nba.com which is the official NBA website and ESPN. We are
