@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-
+<link rel="stylesheet" href="final.css">
 <title>Final project</title>
 
 <style type="text/css">
@@ -13110,9 +13110,42 @@ div {text-align: center;}
     <div class="container">
     
 
-<div>
+<div id="title">
   <h1>Stephen Curry Shot from 2010 to 2018</h1>
   <h2>Author:Augustine Xu</h2>
+</div>
+
+<div id="Info">
+  <p>The name of the dataset is "Stephen_curry_shooting". It is from the website
+  named “NBAsavant” which provides detailed stats for NBA league The link is down at the bottom of the page. 
+  You can search any dataset you interested on this site. There is not specific license while it
+  indicates the all data is from stats.nba.com which is the official NBA website and ESPN. We are
+  allowed to use the data for non-profit analysis and visualization. 
+  The file is 1224KB and 7224 rows * 22 columns.</p>
+
+  <p>The dataset has 7224 rows and 22 columns. Each row represents a shot taken by Stephen
+  Curry during his career in NBA. The columns are indicating the details of each shot including
+  <i>‘name’, ‘team_name’, ‘game_date’, ‘season’, ‘espn_player_id’, ‘team_id’,‘espn_game_id’,
+  ‘period’, ‘minutes_remaining’, ‘seconds_remaining’,‘shot_made_flag’, ‘action_type’, ‘shot_type’,
+  ‘shot_distance’,‘opponent’, ‘x’, ‘y’, ‘dribbles’, ‘touch_time’, ‘defender_name’,‘defender_distance’,
+  ‘shot_clock’. </i> In this dataset, <b>'name', 'team_name', 'espn_player_id' and 'team_id' </b>
+  are all the same since it is the dataset of shots by Stephen Curry and he only plays for Golden 
+  State Warriors since he entered the league. There are two special columns in this dataset which 
+  is <b>'x'</b> and <b>'y'</b>. It is the x-axis and y-axis for the shot location on the scaled NBA court.
+  </p>
+
+  <p>
+    The dashboard below is the Interactive Shot chart I made from this dataset which includes the shots by Stephen Curry from 2010 to 2018.
+    The <b>Jupyter Notebook</b> is the tool I used to complete this interactive dashboard and I used <b>nbinteract</b> which is a Python package to convert
+    Jupyter notebook interactive widgets to HTML file. You can explore Docs by click the link at the bottom.
+    The Season allows you guys to select any one season to plot, and there is an option 'All' to plot all seasons.
+    The Color gives the options to choose any colors you want from Matplotlib ColorMaps.
+    The Shot_type basically have three options which are '2PT Fied Goal','3PT Fied Goal' and 'All'. 
+  </p>
+<div>
+  <H2>It may take few minutes to initializating the widgets through Mybinder. You can check the background progress in Dev Tool</H2>
+</div>
+
 </div>
 
   <div class="cell text_cell">
@@ -13120,7 +13153,6 @@ div {text-align: center;}
       Loading widgets...
     </button>
   </div>
-
 
 
 
@@ -13260,28 +13292,17 @@ div {text-align: center;}
 
   </div>
 
-<img src="">
-<p>The name of the dataset is "Stephen_curry_shooting". It is from the website
-named “NBAsavant” which provides detailed stats for NBA league. 
-You can search any dataset you interested on this site. There is not specific license while it
-indicates the all data is from stats.nba.com which is the official NBA website and ESPN. We are
-allowed to use the data for non-profit analysis and visualization. 
-The file is 1224KB and 7224 rows * 22 columns.</p>
+<img src="Contextual1.png">
+<img src="Contextual2.png">
+<h3>0 For Missed Shots, 1 for Made Shots</h3>
 <br>
 
-<p>The dataset has 7224 rows and 22 columns. Each row represents a shot taken by Stephen
-Curry during his career in NBA. The columns are indicating the details of each shot including
-<i>‘name’, ‘team_name’, ‘game_date’, ‘season’, ‘espn_player_id’, ‘team_id’,‘espn_game_id’,
-‘period’, ‘minutes_remaining’, ‘seconds_remaining’,‘shot_made_flag’, ‘action_type’, ‘shot_type’,
-‘shot_distance’,‘opponent’, ‘x’, ‘y’, ‘dribbles’, ‘touch_time’, ‘defender_name’,‘defender_distance’,
-‘shot_clock’. </i> In this dataset, <b>'name', 'team_name', 'espn_player_id' and 'team_id' </b>
-are all the same since it is the dataset of shots by Stephen Curry and he only plays for Golden 
-State Warriors since he entered the league. There are two special columns in this dataset which 
-is <b>'x'</b> and <b>'y'</b>. It is the x-axis and y-axis for the shot location on the scaled NBA court.
-</p>
-
-
-
+<br>
+<div id="link" style="text-align: left">
+  <h3>Citations:</h3>
+  <p>Dataset Source: <a href='http://nbasavant.com/shot_search.php?hfST=jump%7C&hfQ=&pid%5B%5D=201939&hfSZB=three%7Ctwo%25You'>NBA Savant</a></p>
+  <p>Embedded Jupyter Notebook Tool: <a href="https://www.nbinteract.com/">nbinteract</a></p>
+</div>
 
 <!-- Loads nbinteract package -->
 <script src="https://unpkg.com/nbinteract-core" async></script>
