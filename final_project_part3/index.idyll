@@ -3,7 +3,6 @@
 [Header
   fullWidth:true
   title:"Stephen Curry Shot from 2010 To 2018"
-  subtitle:"Welcome to Idyll. Open index.idyll to start writing"
   author:"Augustine Xu"
   authorLink:"https://github.com/augustinexu/augustinexu.github.io"
   date:"May 10, 2021"
@@ -19,30 +18,71 @@
 
 [Table data:df /]
 
+## Stephen Curry Shot Attempted from 2010 to 2017 season
+[var name:"colorBy" value:`{}`/]
+
 [IdyllVegaLite data:df spec:`{
-  mark: "bar",
-  width:600,
-  height:400,
-  // add in a transformation to filter our data
-  encoding: {
-    x: {field:"season", type:"nominal"},
-	y: {aggregate:"count", field:"season"}
-	//color: colorBy4
-  }
+  description: "Max and min total floors for each district",
+  data: {
+    url: "https://raw.githubusercontent.com/augustinexu/augustinexu.github.io/main/Stephen_curry_shot.json"
+  },
+  height: 500,
+  width: 700,
+  	mark: "bar",
+    encoding: {
+        x: {"field": "season", "type": "nominal"},
+        y: {"aggregate": "count", "field": "season",title:"Shot Attempted"},
+        color: colorBy
+    }
 }` 
 /]
-
+Color By:
+[button onClick:`colorBy = {}`]None[/button]
+[button onClick:`colorBy = {field:"shot_type", type:"nominal"}`]Shot type[/button]
  
+## Stephen Curry Shot Attempted and Made over Teams
+[var name:"colorBy2" value:`{}`/]
 
 [IdyllVegaLite data:df spec:`{
-  mark: "point",
-  width:600,
-  height:400,
-  // add in a transformation to filter our data
-  encoding: {
-    x: {field:"x", type:"quantitative"},
-	y: {field:"y", type:"quantitative"}
-	//color: colorBy4
-  }
+  description: "Max and min total floors for each district",
+  data: {
+    url: "https://raw.githubusercontent.com/augustinexu/augustinexu.github.io/main/Stephen_curry_shot.json"
+  },
+  height: 500,
+  width: 700,
+  	mark: "bar",
+    encoding: {
+        x: {"field": "opponent", "type": "nominal"},
+        y: {"aggregate": "count", "field": "opponent",title:"Shot made by teams"},
+        color: colorBy2
+    }
 }` 
 /]
+Color By:
+[button onClick:`colorBy2 = {}`]None[/button]
+[button onClick:`colorBy2 = {field:"shot_made_flag", type:"nominal"}`]Shot Maded[/button]
+
+
+
+##Contextual visualizations
+
+##Info
+The name of the dataset is Stephen_curry_shooting. It is from the website
+named “NBAsavant” which provides detailed stats for NBA league. 
+You can search any dataset you interested on this site. There is not specific license while it
+indicates the all data is from stats.nba.com which is the official NBA website and ESPN. We are
+allowed to use the data for non-profit analysis and visualization. 
+The file is 1224KB and 7224 rows * 22 columns.
+
+The dataset has 7224 rows and 22 columns. Each row represents a shot taken by Stephen
+Curry during his career in NBA. The columns are indicating the details of each shot including
+[i]‘name’, ‘team name’, ‘game date’, ‘season’, ‘espn player id’, ‘team id’,‘espn game id’,
+‘period’, ‘minutes remaining’, ‘seconds remaining’,‘shot made flag’, ‘action type’, ‘shot type’,
+‘shot distance’,‘opponent’, ‘x’, ‘y’, ‘dribbles’, ‘touch time’, ‘defender name’,‘defender distance’,
+‘shot clock’. [/i] In this dataset, [b]'name', 'team name', 'espn player id' and 'team id' [/b]
+are all the same since it is the dataset of shots by Stephen Curry and he only plays for Golden 
+State Warriors since he entered the league. There are two special columns in this dataset which 
+is x and y. It is the x-axis and y-axis for the shot location on the scaled NBA court.
+
+##Citations
+[a href:'http://nbasavant.com/shot_search.php?hfST=jump%7C&hfQ=&pid%5B%5D=201939&hfSZB=three%7Ctwo%25You']NBA Savant[/a]
