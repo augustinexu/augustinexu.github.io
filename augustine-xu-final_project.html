@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<link rel="stylesheet" href="final.css">
+
 <title>Final project</title>
 
 <style type="text/css">
@@ -9378,7 +9378,7 @@ div.traceback-wrapper pre.traceback {
  * Author: Jupyter Development Team
  */
 body {
-  background-color: #fff;
+  background-color: #F0F8FF;
   /* This makes sure that the body covers the entire window and needs to
        be in a different element than the display: box in wrapper below */
   position: absolute;
@@ -13047,6 +13047,42 @@ div#notebook {
 h1 {text-align: center;}
 h2 {text-align: center;}
 div {text-align: center;}
+
+#link{
+  text-align: left;
+}
+
+div {
+  padding: 15px;
+}
+
+img {
+  padding: 20px;
+  margin: 5px;
+}
+
+p{
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#title{
+  font-family: "Times New Roman", Times, serif;
+}
 </style>
 
 <!-- Loading mathjax macro -->
@@ -13114,7 +13150,9 @@ div {text-align: center;}
   <h1>Stephen Curry Shot from 2010 to 2018</h1>
   <h2>Author:Augustine Xu</h2>
 </div>
-
+<div>
+    <img src="Curry.jpg" width="800">
+</div>
 <div id="Info">
   <p>The name of the dataset is "Stephen_curry_shooting". It is from the website
   named “NBAsavant” which provides detailed stats for NBA league The link is down at the bottom of the page. 
